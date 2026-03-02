@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>다봄치과 구강 포토 실습 매뉴얼</title>
+  <title>BPC 구강 포토 실습 매뉴얼</title>
   <style>
     body {
-      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
       line-height: 1.6;
       color: #333;
       background-color: #f4f7f6;
@@ -14,7 +14,7 @@
       padding: 0;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 20px auto;
       background: #fff;
       border-radius: 12px;
@@ -27,25 +27,8 @@
       padding: 30px 20px;
       text-align: center;
     }
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-      font-weight: 700;
-    }
-    .header p {
-      margin: 10px 0 0;
-      opacity: 0.8;
-      font-size: 15px;
-    }
-    .quick-bar {
-      background: #34495e;
-      color: #ecf0f1;
-      display: flex;
-      justify-content: space-around;
-      padding: 12px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+    .header h1 { margin: 0; font-size: 26px; }
+    .header p { margin: 10px 0 0; opacity: 0.8; font-size: 15px; }
     .section {
       padding: 25px 30px;
       border-bottom: 1px solid #eee;
@@ -57,50 +40,17 @@
       font-size: 20px;
       margin-top: 0;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .card {
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #e9ecef;
-    }
-    table {
+    /* PDF 창을 꽉 차게 만드는 스타일 */
+    .pdf-container {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid #dee2e6;
-      padding: 12px;
-    }
-    th {
-      background: #f1f3f5;
-      color: #495057;
-      font-weight: bold;
-    }
-    .highlight {
-      color: #e74c3c;
-      font-weight: bold;
-    }
-    .tips {
-      background: #fff3cd;
-      border: 1px solid #ffeeba;
-      padding: 20px;
+      height: 700px; /* PC에서 보기 좋은 세로 길이 */
+      border: 1px solid #ddd;
       border-radius: 8px;
       margin-top: 15px;
     }
-    .tips ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-    .tips li {
-      margin-bottom: 8px;
+    /* 모바일 환경 세로 길이 조절 */
+    @media (max-width: 600px) {
+      .pdf-container { height: 500px; }
     }
     .footer {
       text-align: center;
@@ -115,93 +65,19 @@
 
   <div class="container">
     <div class="header">
-      <h1>📸 임상 구강 포토 실습 매뉴얼</h1>
-      [cite_start]<p>정확한 진단과 기록을 위한 BPC 포토 실습 표준 가이드 [cite: 86]</p>
-    </div>
-
-    <div class="quick-bar">
-      [cite_start]<span>👥 3인 1조 [cite: 87]</span>
-      [cite_start]<span>⚙️ M 모드 [cite: 91]</span>
-      [cite_start]<span>💡 ISO 200 [cite: 97]</span>
-      [cite_start]<span>🎨 WB 해/구름 [cite: 95]</span>
+      <h1>📸 BPC 구강 포토 실습 매뉴얼</h1>
+      <p>정확한 진단과 기록을 위한 BPC 포토 실습 원본 교재</p>
     </div>
 
     <div class="section">
-      <h2>1. [cite_start]필수 기자재 체크 [cite: 88]</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>🎥 기본 장비</strong><br>
-          [cite_start]카메라, TECHNO LENS [cite: 89, 98]
-        </div>
-        <div class="card">
-          <strong>🪞 미러 & 리트랙터</strong><br>
-          [cite_start]미러 2종, 세이노/앵글 리트랙터 [cite: 89, 101]
-        </div>
-        <div class="card">
-          <strong>🛠 보조 도구</strong><br>
-          [cite_start]토치, 안경닦는천(융크리너) [cite: 89]
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>2. [cite_start]5매 촬영법 배율 및 환경 [cite: 103]</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>구분</th>
-            [cite_start]<th>정면 [cite: 104]</th>
-            [cite_start]<th>측방면 [cite: 104]</th>
-            [cite_start]<th>교합면 [cite: 104]</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>초점 (Focus)</strong></td>
-            [cite_start]<td>측절치 [cite: 118]</td>
-            [cite_start]<td>제2소구치 [cite: 126]</td>
-            [cite_start]<td>제2소구치 [cite: 104]</td>
-          </tr>
-          <tr>
-            <td><strong>리트랙터</strong></td>
-            [cite_start]<td>Angle [cite: 104]</td>
-            [cite_start]<td>Seino [cite: 104]</td>
-            [cite_start]<td>Seino [cite: 104]</td>
-          </tr>
-          <tr>
-            <td><strong>배율 (F값)</strong></td>
-            [cite_start]<td class="highlight">1/2 (f/22) [cite: 104]</td>
-            [cite_start]<td class="highlight">1/1 (f/18) [cite: 104]</td>
-            [cite_start]<td class="highlight">1/2 (f/18) [cite: 104]</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section">
-      <h2>3. 부위별 촬영 핵심 팁 (Pro-Tips)</h2>
-      
-      <div class="tips">
-        <strong>🔥 기본 주의사항</strong>
-        <ul>
-          [cite_start]<li>토치는 2초만 가열하며, 손목 안쪽에 대어 온도를 체크하여 화상에 주의합니다. [cite: 106, 109, 110]</li>
-          [cite_start]<li>입술이 말려 들어가지 않도록 리트랙터를 적셔줍니다. [cite: 111]</li>
-          [cite_start]<li>거울을 닦을 때는 반드시 전용 융크리너를 사용합니다. [cite: 112]</li>
-        </ul>
-      </div>
-
-      <div class="tips" style="background: #e8f4f8; border-color: #bee5eb;">
-        <strong>📸 정면 / 측면 / 교합면 촬영 포인트</strong>
-        <ul>
-          [cite_start]<li><strong>정면:</strong> 순소대가 수직으로 보이도록 수평으로 리트랙션하며, 교합평면을 보조선에 맞춥니다. [cite: 115, 119, 120]</li>
-          <li><strong>측면:</strong> 미러 끝이 치은에 닿아 통증을 유발하지 않도록 뒤로 밀지 않고 옆으로 엽니다. (협측으로 띄우는 감각) [cite_start][cite: 123, 129]</li>
-          [cite_start]<li><strong>교합면:</strong> 보조자는 텐트를 펼치듯이 점막과 치아를 떨어뜨리고, 리트랙터 뒤에 손가락을 대어 빠지지 않게 파지합니다. [cite: 134]</li>
-        </ul>
-      </div>
+      <h2>📖 포토 실습 교재 전체 보기</h2>
+      <iframe class="pdf-container" src="포토실습교재.pdf">
+        <p>현재 브라우저에서 PDF를 바로 볼 수 없습니다. <a href="포토실습교재.pdf">여기에서 PDF를 다운로드</a> 하세요.</p>
+      </iframe>
     </div>
 
     <div class="footer">
-      ⓒ 2026 다봄치과 임상 교육 매뉴얼
+      ⓒ 2026 BPC 임상교육 매뉴얼
     </div>
   </div>
 
